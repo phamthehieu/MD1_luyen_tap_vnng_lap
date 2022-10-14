@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let input = +prompt('Nhập số');
+    let x = 0;
+    let y = 1;
+    let z ;
+    let a = 1;
+    for (let i = 0;i < input - 2; i++)  {
+        z = x + y;
+        x = y;
+        y = z;
+        a = z + a;
+    }
+    document.write(a);
+</script>
+</body>
+</html>

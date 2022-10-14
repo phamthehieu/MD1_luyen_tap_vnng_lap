@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button onclick="may()">Play!</button>
+<script>
+function may() {
+  let get = +prompt('Nhập khoảng số đoán:');
+  let gun = Math.floor(Math.random() * get)
+  let flag = 0;
+  for (let i = 0;i < 3; i++ ) {
+    flag = 0;
+    let nguoi = +prompt('Nhập khoảng ba đoán:');
+    if (nguoi === gun) {
+      alert('Bạn đoán đúng rồi');
+      break;
+    } else if (nguoi < gun) {
+      alert('Bạn đoán sai rồi!');
+      flag = 1;
+    } else if (nguoi > gun) {
+      alert('Bạn đoám sai  rồi!');
+      flag = 1;
+    }
+  }
+  if (flag == 1) alert('Trò chơi két thúc!')
+}
+</script>
+</body>
+</html>
